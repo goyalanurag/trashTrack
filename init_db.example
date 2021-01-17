@@ -1,0 +1,19 @@
+3 databases:
+    1. auth
+    2. districts
+    3. locations
+
+auth
+----
+* 1 table
+* user_id, username, email, password_hash
+
+districts
+---------
+* District-wise tables
+* id, coordinates, address, image, sightings, last_seen, amount, status.
+
+locations
+------------
+* location_id-wise tables
+* id, time, amount, increment

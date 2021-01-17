@@ -7,22 +7,22 @@ from keras.models import Sequential, load_model
 import cv2
 
 
-if os.path.isfile('DATA/train/.DS_Store'):
-    os.remove('DATA/train/.DS_Store')
-if os.path.isfile('DATA/test/.DS_Store'):
-    os.remove('DATA/test/.DS_Store')
+if os.path.isfile('daa/train/.DS_Store'):
+    os.remove('data/train/.DS_Store')
+if os.path.isfile('data/test/.DS_Store'):
+    os.remove('data/test/.DS_Store')
 
 datagen = ImageDataGenerator(rescale=1./255,
                              zoom_range=0.2)
 
 
-trained_image = datagen.flow_from_directory('DATA/train',
+trained_image = datagen.flow_from_directory('data/train',
                                             target_size=(32, 32),
                                             class_mode='categorical')
 
 test_datagen = ImageDataGenerator(rescale=1./255)
 
-test_image = test_datagen.flow_from_directory('DATA/test',
+test_image = test_datagen.flow_from_directory('data/test',
                                               target_size=(32, 32),
                                               class_mode='categorical')
 
@@ -47,7 +47,7 @@ def Train_Model():
 # Train_Model()
 
 # testing a random img
-img = cv2.imread('DATA/test/Low/1.jpg')
+img = cv2.imread('data/test/low/1.jpg')
 
 
 def Predict_Model(img):
