@@ -3,15 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chartiful/react-chart-builder": "^0.1.6",
+    "@chartiful/react-vertical-bar-graph": "^0.1.6",
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
+    "@react-google-maps/api": "^2.1.0",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
+    "barchart": "^0.6.1",
     "react": "^17.0.1",
+    "react-bar-chart": "^0.1.2",
     "react-dom": "^17.0.1",
+    "react-line-graph": "^1.0.6",
+    "react-native-locationiq": "^0.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "smooth-line-graph": "^0.3.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

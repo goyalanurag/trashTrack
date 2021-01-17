@@ -28,6 +28,7 @@ export const Nav = () => {
           <Button color="inherit" className={classes.menuButton}><a href="/signin" style={{textDecoration:'none',color:'white'}}><i class="fas fa-sign-in-alt" style={{paddingRight: '5px'}}></i> Login</a></Button>
           <Button color="inherit" className={classes.menuButton}><a href="/" style={{textDecoration:'none',color:'white'}}><i class="fas fa-home" style={{paddingRight: '5px'}}></i> Home</a></Button>
           <Button color="inherit" className={classes.menuButton}><a href="/maps" style={{textDecoration:'none',color:'white'}}><i class="fas fa-map-marker-alt" style={{paddingRight: '5px'}}></i> Maps</a></Button>
+          <Button color="inherit" className={classes.menuButton}><a href="/analytics" style={{textDecoration:'none',color:'white'}}><i class="fas fa-chart-line" style={{paddingRight: '5px'}}></i> Analytics</a></Button>
         </Toolbar>
       </AppBar>
     </div>
