@@ -5,7 +5,7 @@ import os
 import sys
 
 def reverse_geocode(coordinates):
-    api_key = '738524a5b5c3b857060ea4b5f32b208b'#os.environ.get('POSITIONSTACK_API')
+    api_key = os.environ.get('POSITIONSTACK_API')
     lat, lng = [x.strip() for x in coordinates.split(',')[:2]]
     query = f'http://api.positionstack.com/v1/reverse?access_key={api_key}&query={lat},{lng}&country=IN&limit=1'
 
