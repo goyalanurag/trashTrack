@@ -76,7 +76,7 @@ def predict_model(img):
             return key
 
 def scan_and_call():
-    path = os.path.join(cwd, '../../img')
+    path = os.path.join(cwd, '../img')
     path = os.path.abspath(path)
 
     with open(f'{path}/latest_timestamp', 'r') as f:
