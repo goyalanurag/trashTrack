@@ -1,5 +1,4 @@
 
-import './App.css';
 import {BrowserRouter,Switch, Route} from 'react-router-dom';
 import {Nav} from './components/Navigation';
 import {Sign} from './components/SignIn';
