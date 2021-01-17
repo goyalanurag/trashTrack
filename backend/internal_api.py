@@ -1,8 +1,10 @@
 import os
 from flask import Flask, request, jsonify
-from geocode_module import reverse_geocode
-from db_module import district_db, location_db
-from clustering_algo import clustering
+from modules.geocode_module import reverse_geocode
+from modules.db_module import district_db, location_db
+from modules.clustering_algo import clustering
+from ml_model.trash_detection import scan_and_call
+from time import sleep
 
 ddb = district_db()
 ldb = location_db()
@@ -37,3 +39,7 @@ def read_from_db():
 
 if __name__ == '__main__':
     app.run(host='localhost', port='4000', debug=False)
+
+    while True:
+        scan_and_call()
+        sleep(120)
