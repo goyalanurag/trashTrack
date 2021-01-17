@@ -5,6 +5,7 @@ from modules.db_module import district_db, location_db
 from modules.clustering_algo import clustering
 from ml_model.trash_detection import scan_and_call
 from time import sleep
+from multiprocessing import Process
 
 ddb = district_db()
 ldb = location_db()
@@ -37,9 +38,16 @@ def read_from_db():
 
     return jsonify(ldb.get_location_data(location_id))
 
-if __name__ == '__main__':
+def process_1():
     app.run(host='localhost', port='4000', debug=False)
 
+def process_2():
     while True:
         scan_and_call()
         sleep(120)
+
+if __name__ == '__main__':
+    p1 = Process(target=process_1)
+    p2 = Process(target=process_2)
+    p1.start(); p2.start()
+    p1.join(); p2.join()

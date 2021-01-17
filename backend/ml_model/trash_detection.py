@@ -93,9 +93,9 @@ def scan_and_call():
             assert len(subfiles) == 2
             time = os.stat(name).st_ctime
             assert time > latest
+            _latest = time
             time = datetime.fromtimestamp(time).strftime('%Y-%m-%d %H:%M:%S')
             new_dirs.append((name, time))
-            _latest = time
         except AssertionError:
             pass
 
