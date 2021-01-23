@@ -17,4 +17,4 @@ in `frontend` run:
 * `npm start`
 
 in `backend` run:
-* `python3 internal_api.py`
+* `python3 routes.py`
